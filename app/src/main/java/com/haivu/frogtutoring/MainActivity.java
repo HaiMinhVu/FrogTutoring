@@ -37,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
         database = new DBManager(this, "frogtutors.db", null, 1);
 
         database.QueryData("CREATE TABLE IF NOT EXISTS tutors(tuid INTEGER PRIMARY KEY AUTOINCREMENT, tuname TEXT, tusubject TEXT, tuemail TEXT, tupass TEXT, turate REAL)");
@@ -48,12 +45,16 @@ public class MainActivity extends AppCompatActivity {
         database.QueryData("CREATE TABLE IF NOT EXISTS available(tuid INTEGER PRIMAEY KEY, day TEXT, time TEXT)");
         database.QueryData("CREATE TABLE IF NOT EXISTS appointment(tuid INTEGER, stid INTEGER, day TEXT, time TEXT, price REAL, PRIMARY KEY(tuid, stid))");
 
+
+
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent gotoprofile = new Intent(MainActivity.this, profile.class);
+                startActivity(gotoprofile);
             }
         });
+        
 
         tvsignup.setOnClickListener(new View.OnClickListener() {
             @Override

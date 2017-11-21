@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haivu.frogtutoring.profile"
+    android:padding="10dp"
+    android:background="#81d7f2">
+
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="66dp"
+        android:text="S"
+        android:textSize="100dp" />
+
+    <Button
+        android:id="@+id/btnAppointments"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="66dp"
+        android:text="A"
+        android:textSize="100dp" />
+
+    <Button
+        android:id="@+id/btnPayments"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="66dp"
+        android:text="P"
+        android:textSize="100dp" />
+
+    <Button
+        android:id="@+id/btnReviews"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="66dp"
+        android:text="R"
+        android:textSize="100dp" />
+
+    <TextView
+        android:id="@+id/tvsignout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Sign Out" />
+
+    <TextView
+        android:id="@+id/tvstname"
+        android:paddingRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvsignout"
+        android:layout_toLeftOf="@+id/tvsignout"
+        android:layout_toStartOf="@+id/tvsignout"
+        android:text="Name" />
+</RelativeLayout>

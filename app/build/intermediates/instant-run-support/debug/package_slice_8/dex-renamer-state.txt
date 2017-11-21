@@ -1,0 +1,4 @@
+#Sun Nov 19 19:00:18 CST 2017
+base.0=/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8
+renamed.0=classes.dex
+file.0=/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex

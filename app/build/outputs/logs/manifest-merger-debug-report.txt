@@ -1,0 +1,94 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:2:1-25:12
+	package
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:3:5-37
+		INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml
+application
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:5:5-23:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha9] /Users/haivu/.android/build-cache/251cfce4ba71cf910dad5d0976541be2cb04d3a2/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:25.1.0] /Users/haivu/.android/build-cache/1daf18d05a984387380027811927bc5572b7cba1/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.1.0] /Users/haivu/.android/build-cache/f934894fe828688fdaff66193a9810d459ae5a2e/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] /Users/haivu/.android/build-cache/4fd1d740e2978bf449ee64739b01b09ca0da4811/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.0] /Users/haivu/.android/build-cache/075b09ed44cbdae7540b58b1500d301e237399ef/output/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:transition:25.1.0] /Users/haivu/.android/build-cache/06176a0de2c880e580510cbafa1575652f2494fc/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:25.1.0] /Users/haivu/.android/build-cache/d22ac6454c0b9472868402e1e3f5e17d1d2198e5/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.1.0] /Users/haivu/.android/build-cache/d09f68e897a994eee4dc50115b2b4063dbffe00a/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.0] /Users/haivu/.android/build-cache/5d726dfd5a7b93f87d48a6d46f8244040f249f48/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.0] /Users/haivu/.android/build-cache/1637ffabb90591b924d940efebda092046361a64/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.0] /Users/haivu/.android/build-cache/35d610df86eaab4768d0859f1ac679b8b1523008/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.1.0] /Users/haivu/.android/build-cache/3eb8fd73376dd5c7444119d89bd9cf0bb0d25ce1/output/AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:9:9-54
+	android:allowBackup
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.haivu.frogtutoring.MainActivity
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:12:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:16:27-74
+activity#com.haivu.frogtutoring.Search
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:19:9-44
+	android:name
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:19:19-41
+activity#com.haivu.frogtutoring.SignUp
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:20:9-44
+	android:name
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:20:19-41
+activity#com.haivu.frogtutoring.forgotpass
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:21:9-48
+	android:name
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:21:19-45
+activity#com.haivu.frogtutoring.profile
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:22:9-54
+	android:name
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:22:19-42
+uses-sdk
+INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha9] /Users/haivu/.android/build-cache/251cfce4ba71cf910dad5d0976541be2cb04d3a2/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:25.1.0] /Users/haivu/.android/build-cache/1daf18d05a984387380027811927bc5572b7cba1/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.1.0] /Users/haivu/.android/build-cache/f934894fe828688fdaff66193a9810d459ae5a2e/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.1.0] /Users/haivu/.android/build-cache/4fd1d740e2978bf449ee64739b01b09ca0da4811/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.1.0] /Users/haivu/.android/build-cache/075b09ed44cbdae7540b58b1500d301e237399ef/output/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.1.0] /Users/haivu/.android/build-cache/49497a9723bffd01128dd9a22722927ed44c3d14/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.1.0] /Users/haivu/.android/build-cache/06176a0de2c880e580510cbafa1575652f2494fc/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.1.0] /Users/haivu/.android/build-cache/d22ac6454c0b9472868402e1e3f5e17d1d2198e5/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.1.0] /Users/haivu/.android/build-cache/d09f68e897a994eee4dc50115b2b4063dbffe00a/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.1.0] /Users/haivu/.android/build-cache/5d726dfd5a7b93f87d48a6d46f8244040f249f48/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.1.0] /Users/haivu/.android/build-cache/1637ffabb90591b924d940efebda092046361a64/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.1.0] /Users/haivu/.android/build-cache/35d610df86eaab4768d0859f1ac679b8b1523008/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.1.0] /Users/haivu/.android/build-cache/3eb8fd73376dd5c7444119d89bd9cf0bb0d25ce1/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.1.0] /Users/haivu/.android/build-cache/1daf18d05a984387380027811927bc5572b7cba1/output/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml
