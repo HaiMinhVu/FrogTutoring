@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haivu.frogtutoring.forgotpass"
+    android:background="#81d7f2">
+
+
+    <EditText
+        android:id="@+id/edtfgemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="104dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Email" />
+
+    <EditText
+        android:id="@+id/edtfgphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtfgemail"
+        android:layout_alignStart="@+id/edtfgemail"
+        android:layout_below="@+id/edtfgemail"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Phone" />
+
+    <Button
+        android:id="@+id/fgok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/edtfgphone"
+        android:layout_alignRight="@+id/edtfgphone"
+        android:layout_below="@+id/edtfgphone"
+        android:layout_marginTop="59dp"
+        android:text="OK" />
+
+    <Button
+        android:id="@+id/fgcancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtfgphone"
+        android:layout_alignStart="@+id/edtfgphone"
+        android:layout_alignTop="@+id/fgok"
+        android:text="Cancel" />
+
+</RelativeLayout>

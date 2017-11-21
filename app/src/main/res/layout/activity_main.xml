@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haivu.frogtutoring.MainActivity"
+    android:padding="10dp"
+    android:background="#81d7f2">
+
+    <TextView
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Frog Tutoring"
+        android:textSize="40dp"
+        android:fontFamily="cursive"
+        android:textColor="#ff00"
+        android:gravity="center"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edtemail"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint=" Email"
+        android:layout_marginTop="65dp" />
+
+    <EditText
+        android:id="@+id/edtpass"
+        android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtemail"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint=" Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:background="#16c447"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtpass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="LOG IN"
+        android:textColorHighlight="#ff00"/>
+
+    <TextView
+        android:id="@+id/tvforgot"
+        android:paddingRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textSize="15dp"
+        android:textColor="#05078c"
+        android:layout_below="@id/btnlogin"
+        android:paddingTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvsignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textSize="15dp"
+        android:textColor="#05078c"
+        android:layout_below="@id/btnlogin"
+        android:paddingTop="10dp"
+        android:layout_alignBottom="@+id/tvforgot"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:id="@+id/imageSearch"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/lookup"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
