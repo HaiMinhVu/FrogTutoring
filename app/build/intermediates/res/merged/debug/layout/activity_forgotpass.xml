@@ -12,12 +12,13 @@
         android:id="@+id/edtfgemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="171dp"
+        android:textColor="#05078c"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Email" />
+        android:hint="Email"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/edtfgphone"
@@ -26,6 +27,7 @@
         android:layout_alignLeft="@+id/edtfgemail"
         android:layout_alignStart="@+id/edtfgemail"
         android:layout_below="@+id/edtfgemail"
+        android:textColor="#05078c"
         android:layout_marginTop="37dp"
         android:ems="10"
         android:inputType="phone"
@@ -39,6 +41,7 @@
         android:layout_alignRight="@+id/edtfgphone"
         android:layout_below="@+id/edtfgphone"
         android:layout_marginTop="59dp"
+        android:textColor="#05078c"
         android:text="OK" />
 
     <Button
@@ -48,6 +51,18 @@
         android:layout_alignLeft="@+id/edtfgphone"
         android:layout_alignStart="@+id/edtfgphone"
         android:layout_alignTop="@+id/fgok"
+        android:textColor="#05078c"
         android:text="Cancel" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="#ff00"
+        android:text="Retrieve Password"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="87dp" />
 
 </RelativeLayout>

@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -15,6 +14,8 @@ import java.util.List;
  */
 
 public class tutorsAdapter extends BaseAdapter {
+
+
 
     private Context context;
     private int layout;
@@ -43,13 +44,10 @@ public class tutorsAdapter extends BaseAdapter {
 
     private class ViewHolder{
         TextView tvtuname, tvtusubject, tvturate;
-        Button btappt, btreview;
     }
 
-
-
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(final int i, View view, ViewGroup viewGroup) {
         ViewHolder holder;
 
         if(view == null){
@@ -59,21 +57,20 @@ public class tutorsAdapter extends BaseAdapter {
             holder.tvtuname    = (TextView) view.findViewById(R.id.tvtuname);
             holder.tvtusubject = (TextView) view.findViewById(R.id.tvtusubject);
             holder.tvturate    = (TextView) view.findViewById(R.id.tvturate);
-            holder.btappt      = (Button) view.findViewById(R.id.btappt);
-            holder.btreview    = (Button) view.findViewById(R.id.btreview);
             view.setTag(holder);
         }else {
             holder = (ViewHolder) view.getTag();
         }
-
-        tutors tutor = listTutors.get(i);
-
+        final tutors tutor = listTutors.get(i);
         holder.tvtuname.setText(tutor.getTuname());
         holder.tvtusubject.setText(tutor.getTusubject());
         holder.tvturate.setText(Double.toString(tutor.getTurate()));
 
+
+
         return view;
     }
+
 
 
 

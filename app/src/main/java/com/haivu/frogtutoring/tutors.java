@@ -4,17 +4,21 @@ public class tutors {
     private int tuid;
     private String tuname;
     private String tusubject;
+    private String tubiography;
     private String tuemail;
     private String tupass;
     private double turate;
+    private double tuprice;
 
-    public tutors(int tuid, String tuname, String tusubject, String tuemail, String tupass, double turate) {
+    public tutors(int tuid, String tuname, String tusubject, String tubiography, String tuemail, String tupass, double turate, double tuprice) {
         this.tuid = tuid;
         this.tuname = tuname;
         this.tusubject = tusubject;
+        this.tubiography = tubiography;
         this.tuemail = tuemail;
         this.tupass = tupass;
         this.turate = turate;
+        this.tuprice = tuprice;
 
     }
 
@@ -24,10 +28,13 @@ public class tutors {
         //this.turate = turate;
     }
 
-    public tutors(String tuname, String tusubject, double turate) {
+    public tutors(String tuname, String tusubject, String tubiography, double turate, double tuprice, String tuemail) {
         this.tuname = tuname;
         this.tusubject = tusubject;
+        this.tubiography = tubiography;
         this.turate = turate;
+        this.tuprice = tuprice;
+        this.tuemail = tuemail;
     }
 
     public int getTuid() {
@@ -54,6 +61,14 @@ public class tutors {
         this.tusubject = tusubject;
     }
 
+    public String getTubiography() {
+        return tubiography;
+    }
+
+    public void setTubiography(String tubiography) {
+        this.tubiography = tubiography;
+    }
+
     public String getTuemail() {
         return tuemail;
     }
@@ -78,7 +93,12 @@ public class tutors {
         this.turate = turate;
     }
 
+    public double getTuprice() {
+        return tuprice;
+    }
 
-
+    public void setTuprice(double tuprice) {
+        this.tuprice = tuprice;
+    }
 }
 

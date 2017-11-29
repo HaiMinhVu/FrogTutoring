@@ -19,7 +19,9 @@
         <activity android:name=".Search" />
         <activity android:name=".SignUp" />
         <activity android:name=".forgotpass" />
-        <activity android:name=".profile"></activity>
+        <activity android:name=".profile" />
+        <activity android:name=".appointment" />
+        <activity android:name=".viewtutor"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haivu.frogtutoring.viewtutor"
+    android:background="#81d7f2">
+
+    <TextView
+        android:id="@+id/tvname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tutor Name"
+        android:textSize="30dp"
+        android:textColor="#ff00"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="61dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp" />
+
+    <TextView
+        android:id="@+id/tvprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="#05078c"
+        android:layout_below="@+id/tvname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text="Price" />
+
+    <Button
+        android:id="@+id/btnmakeppt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvprice"
+        android:textColor="#05078c"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:text="Make Appointment" />
+
+    <TextView
+        android:id="@+id/reviewhis"
+        android:paddingTop="10dp"
+        android:text="Previous Reviews"
+        android:textColor="#05078c"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnmakeppt"/>
+
+    <ListView
+        android:id="@+id/listreviews"
+        android:paddingTop="10dp"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/reviewhis" />
+</RelativeLayout>

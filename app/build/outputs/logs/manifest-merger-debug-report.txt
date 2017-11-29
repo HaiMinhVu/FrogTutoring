@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:2:1-25:12
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:2:1-27:12
 	package
 		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:3:5-37
 		INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/Android
 		INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:5:5-23:19
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:5:5-25:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha9] /Users/haivu/.android/build-cache/251cfce4ba71cf910dad5d0976541be2cb04d3a2/output/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.1.0] /Users/haivu/.android/build-cache/1daf18d05a984387380027811927bc5572b7cba1/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:appcompat-v7:25.1.0] /Users/haivu/.android/build-cache/f934894fe828688fdaff66193a9810d459ae5a2e/output/AndroidManifest.xml:25:5-20
@@ -66,9 +66,17 @@ ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/Android
 	android:name
 		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:21:19-45
 activity#com.haivu.frogtutoring.profile
-ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:22:9-54
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:22:9-45
 	android:name
 		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:22:19-42
+activity#com.haivu.frogtutoring.appointment
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:23:9-49
+	android:name
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:23:19-46
+activity#com.haivu.frogtutoring.viewtutor
+ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:24:9-56
+	android:name
+		ADDED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml:24:19-44
 uses-sdk
 INJECTED from /Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.0-alpha9] /Users/haivu/.android/build-cache/251cfce4ba71cf910dad5d0976541be2cb04d3a2/output/AndroidManifest.xml:5:5-7:41

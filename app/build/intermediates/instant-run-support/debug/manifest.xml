@@ -25,6 +25,9 @@
         <activity android:name="com.haivu.frogtutoring.Search" />
         <activity android:name="com.haivu.frogtutoring.SignUp" />
         <activity android:name="com.haivu.frogtutoring.forgotpass" />
+        <activity android:name="com.haivu.frogtutoring.profile" />
+        <activity android:name="com.haivu.frogtutoring.appointment" />
+        <activity android:name="com.haivu.frogtutoring.viewtutor" />
 
         <provider
             android:name="com.android.tools.fd.runtime.InstantRunContentProvider"

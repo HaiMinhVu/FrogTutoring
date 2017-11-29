@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.haivu.frogtutoring.Search"
     android:padding="10dp"
-    android:background="#bbefd1">
+    android:background="#81d7f2">
 
     <ImageView
         android:paddingTop="5dp"
@@ -14,15 +14,17 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:srcCompat="@drawable/search"
-        android:layout_above="@+id/listtutors"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
         android:layout_marginRight="12dp"
-        android:layout_marginEnd="12dp" />
+        android:layout_marginEnd="12dp"
+        android:layout_alignBottom="@+id/edtSearch"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/tvfilter"
         android:text="Filter"
+        android:paddingTop="20dp"
+        android:textColor="#05078c"
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -31,6 +33,7 @@
         android:paddingTop="20dp"
         android:hint="Search for Tutor"
         android:gravity="center"
+        android:textColor="#05078c"
         android:id="@+id/edtSearch"
         android:layout_toLeftOf="@id/imsearch"
         android:layout_toRightOf="@id/tvfilter"
@@ -41,17 +44,20 @@
 
     <Spinner
         android:id="@+id/spfilter"
-        android:layout_below="@+id/tvfilter"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></Spinner>
+        android:textColor="#05078c"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtSearch"></Spinner>
 
     <ListView
         android:id="@+id/listtutors"
+        android:paddingTop="10dp"
+        android:textColor="#05078c"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/edtSearch" />
+        android:layout_below="@+id/spfilter" />
 
 
 </RelativeLayout>

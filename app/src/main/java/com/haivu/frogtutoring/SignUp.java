@@ -41,6 +41,18 @@ public class SignUp extends AppCompatActivity {
                 if(!pass.getText().toString().equals(repass.getText().toString())){
                     Toast.makeText(SignUp.this, "Password not match !!!", Toast.LENGTH_SHORT).show();
                 }
+                else if(name.getText().toString().equals("")){
+                    Toast.makeText(SignUp.this, "Enter your name", Toast.LENGTH_SHORT).show();
+                }
+                else if(email.getText().toString().equals("")){
+                    Toast.makeText(SignUp.this, "Enter your email", Toast.LENGTH_SHORT).show();
+                }
+                else if(pass.getText().toString().equals("")){
+                    Toast.makeText(SignUp.this, "Enter your password", Toast.LENGTH_SHORT).show();
+                }
+                else if(phone.getText().toString().equals("")){
+                    Toast.makeText(SignUp.this, "Enter your phone number", Toast.LENGTH_SHORT).show();
+                }
                 else {
                     boolean isinserted = database.insertStudent(
                             name.getText().toString(),
@@ -54,8 +66,6 @@ public class SignUp extends AppCompatActivity {
                         Toast.makeText(SignUp.this, "Error !!!", Toast.LENGTH_SHORT).show();
                     }
                 }
-
-
             }
         });
 
@@ -67,9 +77,6 @@ public class SignUp extends AppCompatActivity {
                 startActivity(gotomain);
             }
         });
-
-
-
 
     }
 

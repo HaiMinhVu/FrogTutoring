@@ -37,7 +37,6 @@ public class forgotpass extends AppCompatActivity {
             }
         });
 
-
         fgok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,21 +44,15 @@ public class forgotpass extends AppCompatActivity {
             }
         });
 
-
-
     }
 
     public void getpass(){
-        String loopupemail = fgemail.getText().toString();
-        String loopupphone = fgphone.getText().toString();
-        Cursor res = database.GetData("select stpass from students where stemail = '"+loopupemail+"' and stphone = '"+loopupphone+"'");
+        String lookupemail = fgemail.getText().toString();
+        String lookupphone = fgphone.getText().toString();
+        Cursor res = database.GetData("select stpass from students where stemail = '"+lookupemail+"' and stphone = '"+lookupphone+"'");
 
         if(res.getCount() == 0){
-            AlertDialog.Builder alterdialog = new AlertDialog.Builder(forgotpass.this);
-            alterdialog.setCancelable(true);
-            alterdialog.setTitle("Retrieve Password");
-            alterdialog.setMessage("You password is not found");
-            alterdialog.show();
+            dialog_pass_found("Your password is not found");
         }
         else {
             StringBuffer sb = new StringBuffer();
@@ -69,9 +62,7 @@ public class forgotpass extends AppCompatActivity {
             // show password
             dialog_pass_found(sb.toString());
         }
-
     }
-
 
     public void dialog_pass_found(String mess){
         AlertDialog.Builder b = new AlertDialog.Builder(this);
