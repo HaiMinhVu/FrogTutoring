@@ -21,7 +21,11 @@
         <activity android:name=".forgotpass" />
         <activity android:name=".profile" />
         <activity android:name=".appointment" />
-        <activity android:name=".viewtutor"></activity>
+        <activity android:name=".viewtutor" />
+        <activity android:name=".profile_tutor" />
+        <activity android:name=".edit_tutor_profile" />
+        <activity android:name=".tutor_schedule" />
+        <activity android:name=".payment"></activity>
     </application>
 
 </manifest>

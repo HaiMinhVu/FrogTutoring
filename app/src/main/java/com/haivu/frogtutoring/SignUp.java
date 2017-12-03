@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
@@ -16,8 +18,8 @@ public class SignUp extends AppCompatActivity {
 
     EditText name, email, pass, repass, phone;
     Button signup, cancel;
-
-
+    RadioGroup radiosignup;
+    RadioButton radiostudent, radiotutor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +32,11 @@ public class SignUp extends AppCompatActivity {
         pass = (EditText)findViewById(R.id.edtpass);
         repass = (EditText)findViewById(R.id.edtrepass);
         phone = (EditText)findViewById(R.id.edtphone);
-
         signup = (Button) findViewById(R.id.btnsignup);
         cancel = (Button)findViewById(R.id.btncancel);
+        radiosignup = (RadioGroup)findViewById(R.id.radiosignup);
+        radiostudent = (RadioButton)findViewById(R.id.radiostudent);
+        radiotutor = (RadioButton)findViewById(R.id.radiotutor);
 
         // sign up student and insert to database and go back to main page
         signup.setOnClickListener(new View.OnClickListener() {
@@ -54,17 +58,34 @@ public class SignUp extends AppCompatActivity {
                     Toast.makeText(SignUp.this, "Enter your phone number", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    boolean isinserted = database.insertStudent(
-                            name.getText().toString(),
-                            email.getText().toString(),
-                            pass.getText().toString(),
-                            phone.getText().toString());
-                    if(isinserted = true){
-                        successSignup();
+                    if(radiostudent.isChecked()){
+                        boolean isinserted = database.insertStudent(
+                                name.getText().toString(),
+                                email.getText().toString(),
+                                pass.getText().toString(),
+                                phone.getText().toString());
+                        if(isinserted = true){
+                            successSignup();
+                        }
+                        else {
+                            Toast.makeText(SignUp.this, "Error !!!", Toast.LENGTH_SHORT).show();
+                        }
                     }
-                    else {
-                        Toast.makeText(SignUp.this, "Error !!!", Toast.LENGTH_SHORT).show();
+                    if(radiotutor.isChecked()){
+                        boolean isinserted = database.insertTutor(
+                                name.getText().toString(),
+                                email.getText().toString(),
+                                pass.getText().toString(),
+                                phone.getText().toString());
+                        if(isinserted = true){
+                            successSignup();
+                        }
+                        else {
+                            Toast.makeText(SignUp.this, "Error !!!", Toast.LENGTH_SHORT).show();
+                        }
                     }
+
+
                 }
             }
         });

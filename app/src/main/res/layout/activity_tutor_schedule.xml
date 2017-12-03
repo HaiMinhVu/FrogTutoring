@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haivu.frogtutoring.tutor_schedule"
+    android:background="@drawable/background"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teaching Schedule"
+        android:textSize="30dp"
+        android:textColor="#05078c"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:id="@+id/tvpickdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick Date"
+        android:textSize="15dp"
+        android:textColor="#05078c"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="89dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/textView11"
+        android:layout_alignLeft="@+id/textView11"
+        android:layout_alignStart="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/tvstarttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Time"
+        android:textSize="15dp"
+        android:textColor="#05078c"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/tvpickdate"
+        android:layout_alignLeft="@+id/tvpickdate"
+        android:layout_alignStart="@+id/tvpickdate" />
+
+    <TextView
+        android:id="@+id/tvendtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Time"
+        android:textSize="15dp"
+        android:textColor="#05078c"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/tvstarttime"
+        android:layout_alignLeft="@+id/tvstarttime"
+        android:layout_alignStart="@+id/tvstarttime" />
+
+    <Button
+        android:id="@+id/btnaddschedule"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Add"
+        android:textColor="#05078c"
+        android:layout_below="@+id/tvendtime"
+        android:layout_alignRight="@+id/textView11"
+        android:layout_alignEnd="@+id/textView11"
+        android:layout_marginRight="31dp"
+        android:layout_marginEnd="31dp" />
+
+    <Button
+        android:id="@+id/btncancelschedule"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Cancel"
+        android:textColor="#05078c"
+        android:layout_below="@+id/tvendtime"
+        android:layout_toLeftOf="@+id/btnaddschedule"
+        android:layout_toStartOf="@+id/btnaddschedule" />
+
+    <ListView
+        android:id="@+id/lvschedule"
+        android:textColor="#05078c"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnaddschedule"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tuschesignout"
+        android:textColor="#05078c"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Sign Out" />
+
+
+</RelativeLayout>

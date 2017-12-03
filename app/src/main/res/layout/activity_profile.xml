@@ -6,58 +6,20 @@
     android:layout_height="match_parent"
     tools:context="com.haivu.frogtutoring.profile"
     android:padding="10dp"
-    android:background="#81d7f2">
+    android:background="@drawable/background">
 
 
     <Button
         android:foregroundGravity="center"
         android:id="@+id/btnSearch"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="S"
-        android:textSize="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="SEARCH"
+        android:textSize="15dp"
         android:textColor="#05078c"
-        android:layout_alignBaseline="@+id/btnAppointments"
-        android:layout_alignBottom="@+id/btnAppointments"
-        android:layout_alignLeft="@+id/tvdisplayphone"
-        android:layout_alignStart="@+id/tvdisplayphone"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp" />
-
-    <Button
-        android:id="@+id/btnAppointments"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="A"
-        android:textSize="60dp"
-        android:textColor="#05078c"
-        android:layout_above="@+id/btnReviews"
-        android:layout_toRightOf="@+id/btnSearch"
-        android:layout_toEndOf="@+id/btnSearch" />
-
-    <Button
-        android:id="@+id/btnPayments"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="P"
-        android:textSize="60dp"
-        android:textColor="#05078c"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/btnSearch"
-        android:layout_alignStart="@+id/btnSearch"
-        android:layout_marginBottom="88dp" />
-
-    <Button
-        android:id="@+id/btnReviews"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="R"
-        android:textSize="60dp"
-        android:textColor="#05078c"
-        android:layout_alignBottom="@+id/btnPayments"
-        android:layout_toRightOf="@+id/btnSearch"
-        android:layout_toEndOf="@+id/btnSearch"
-        android:layout_alignTop="@+id/btnPayments" />
+        android:layout_below="@+id/tvphone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/tvsignout"
@@ -77,11 +39,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
-        android:textSize="40dp"
-        android:layout_below="@+id/tvsignout"
+        android:textSize="30dp"
         android:textColor="#05078c"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_below="@+id/tvsignout"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/tvemail"
@@ -132,6 +93,39 @@
         android:layout_alignBottom="@+id/tvphone"
         android:layout_alignLeft="@+id/tvdisplayemail"
         android:layout_alignStart="@+id/tvdisplayemail" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="#05078c"
+        android:text="Coming Up Appointment"
+        android:layout_below="@+id/btnSearch"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="#05078c"
+        android:text="Finished Appointment"
+        android:layout_below="@+id/lvcomingupappt"
+        android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:id="@+id/lvfinishedappt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView20" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_below="@+id/textView19"
+        android:id="@+id/lvcomingupappt" />
 
 
 </RelativeLayout>

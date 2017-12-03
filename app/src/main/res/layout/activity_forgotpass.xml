@@ -5,19 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.haivu.frogtutoring.forgotpass"
-    android:background="#81d7f2">
+    android:background="@drawable/background">
 
 
     <EditText
         android:id="@+id/edtfgemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="171dp"
+        android:layout_marginTop="33dp"
         android:textColor="#05078c"
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Email"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/textView4"
         android:layout_centerHorizontal="true" />
 
     <EditText
@@ -37,32 +37,59 @@
         android:id="@+id/fgok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/edtfgphone"
-        android:layout_alignRight="@+id/edtfgphone"
-        android:layout_below="@+id/edtfgphone"
-        android:layout_marginTop="59dp"
+        android:layout_marginTop="107dp"
         android:textColor="#05078c"
-        android:text="OK" />
+        android:text="OK"
+        android:layout_below="@+id/edtfgphone"
+        android:layout_alignRight="@+id/radioGroup"
+        android:layout_alignEnd="@+id/radioGroup" />
 
     <Button
         android:id="@+id/fgcancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/edtfgphone"
-        android:layout_alignStart="@+id/edtfgphone"
-        android:layout_alignTop="@+id/fgok"
         android:textColor="#05078c"
-        android:text="Cancel" />
+        android:text="Cancel"
+        android:layout_alignBaseline="@+id/fgok"
+        android:layout_alignBottom="@+id/fgok"
+        android:layout_alignLeft="@+id/edtfgphone"
+        android:layout_alignStart="@+id/edtfgphone" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30dp"
-        android:textColor="#ff00"
+        android:textColor="#05078c"
         android:text="Retrieve Password"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="87dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/edtfgphone"
+        android:layout_above="@+id/fgcancel"
+        android:layout_alignLeft="@+id/edtfgphone"
+        android:layout_alignStart="@+id/edtfgphone"
+        android:layout_alignRight="@+id/edtfgphone"
+        android:layout_alignEnd="@+id/edtfgphone"
+        android:paddingTop="20dp"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:id="@+id/rdstudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student" />
+
+        <RadioButton
+            android:id="@+id/rdtutor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tutor" />
+    </RadioGroup>
+
 
 </RelativeLayout>

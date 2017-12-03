@@ -5,14 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.haivu.frogtutoring.SignUp"
-    android:background="#81d7f2">
-
+    android:background="@drawable/background">
 
     <EditText
         android:id="@+id/edtname"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="47dp"
         android:inputType="textPersonName"
         android:hint="Name"
         android:textColor="#05078c"
@@ -76,10 +74,10 @@
         android:layout_height="wrap_content"
         android:textColor="#05078c"
         android:text="Cancel"
-        android:layout_below="@+id/edtphone"
+        android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/edtphone"
         android:layout_alignStart="@+id/edtphone"
-        android:layout_marginTop="10dp" />
+        android:layout_marginBottom="71dp" />
 
     <Button
         android:id="@+id/btnsignup"
@@ -102,4 +100,31 @@
         android:text="Sign Up"
         android:textSize="40dp"
         android:textColor="#ff00"/>
+
+
+    <RadioGroup
+        android:id="@+id/radiosignup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/edtphone"
+        android:layout_alignLeft="@+id/edtphone"
+        android:layout_alignStart="@+id/edtphone"
+        android:layout_alignRight="@+id/edtphone"
+        android:layout_alignEnd="@+id/edtphone"
+        android:layout_above="@+id/btncancel">
+
+        <RadioButton
+            android:id="@+id/radiostudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student" />
+
+        <RadioButton
+            android:id="@+id/radiotutor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tutor" />
+    </RadioGroup>
+
 </RelativeLayout>

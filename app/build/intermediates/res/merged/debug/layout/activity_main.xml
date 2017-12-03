@@ -6,31 +6,34 @@
     android:layout_height="match_parent"
     tools:context="com.haivu.frogtutoring.MainActivity"
     android:padding="10dp"
-    android:background="#81d7f2">
+    android:background="@drawable/background">
 
     <TextView
-        android:paddingTop="20dp"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Frog Tutoring"
-        android:textSize="40dp"
         android:fontFamily="cursive"
-        android:textColor="#ff00"
         android:gravity="center"
-        android:id="@+id/textView" />
+        android:paddingTop="20dp"
+        android:text="Frog Tutoring"
+        android:textColor="#03158b"
+        android:textSize="40dp"
+        android:textStyle="bold|italic" />
 
     <EditText
         android:id="@+id/edtemail"
         android:drawableLeft="@drawable/ic_person_black_24dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
+        android:background="#ffff"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:hint=" Email"
-        android:textColor="#05078c"
+
+        android:textColor="#020479"
         android:layout_marginTop="65dp" />
 
     <EditText
@@ -39,26 +42,31 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="20dp"
+        android:background="#ffff"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtemail"
-        android:layout_centerHorizontal="true"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint=" Password"
         android:textColor="#05078c"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:layout_below="@+id/edtemail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp" />
 
     <Button
         android:id="@+id/btnlogin"
-        android:background="#16c447"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
         android:layout_below="@+id/edtpass"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="14dp"
+        android:background="#4154f1"
         android:text="LOG IN"
-        android:textColor="#05078c"
-        android:textColorHighlight="#ff00"/>
+        android:textColor="#f7f2f1"
+        android:textStyle="bold|italic" />
 
     <CheckBox
         android:id="@+id/cbremember"

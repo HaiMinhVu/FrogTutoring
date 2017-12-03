@@ -42,8 +42,25 @@ public class DBManager extends SQLiteOpenHelper {
         values.put("stemail", email);
         values.put("stpass", pass);
         values.put("stphone", phone);
-
         long result =  db.insert("students",null, values);
+        if(result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public boolean insertTutor(String name, String email, String pass, String phone){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("tuname", name);
+        values.put("tusubject", "");
+        values.put("tubiography", "");
+        values.put("tuemail", email);
+        values.put("tupass", pass);
+        values.put("tuphone", phone);
+        values.put("turate", 0);
+        values.put("tuprice", 0);
+        long result =  db.insert("tutors",null, values);
         if(result == -1)
             return false;
         else

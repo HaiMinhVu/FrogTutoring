@@ -9,6 +9,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#05078c"
         android:id="@+id/tvtuname"
         android:text="name"
         android:textSize="20sp"/>
@@ -17,12 +18,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/tvtusubject"
         android:layout_below="@+id/tvtuname"
+        android:textColor="#05078c"
         android:text="subject"
         android:textSize="20sp"/>
     <TextView
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#05078c"
         android:id="@+id/tvturate"
         android:text="rate"
         android:textSize="20sp"
@@ -32,6 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textColor="#05078c"
         android:layout_toLeftOf="@id/tvturate"
         android:text="Rating "
         android:textSize="20sp"/>

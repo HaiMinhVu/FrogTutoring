@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#05078c"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Date" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#05078c"
+        android:text="Start Time"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvdisplaystart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#05078c"
+        android:text="view start time"
+        android:layout_below="@+id/tvdisplaydate"
+        android:layout_alignLeft="@+id/tvdisplaydate"
+        android:layout_alignStart="@+id/tvdisplaydate" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Time"
+        android:textColor="#05078c"
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvdisplayend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="view end time"
+        android:textColor="#05078c"
+        android:layout_below="@+id/tvdisplaystart"
+        android:layout_alignLeft="@+id/tvdisplaystart"
+        android:layout_alignStart="@+id/tvdisplaystart" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="57dp"
+        android:layout_marginRight="57dp"
+        android:text="Duration"
+        android:textColor="#05078c"
+        android:layout_alignBaseline="@+id/tvdisplaystart"
+        android:layout_alignBottom="@+id/tvdisplaystart"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/tvdisplayduration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#05078c"
+        android:layout_alignLeft="@+id/textView18"
+        android:layout_alignStart="@+id/textView18"
+        android:layout_below="@+id/textView18"
+        android:text="view duration" />
+
+    <TextView
+        android:id="@+id/tvdisplaydate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="view date"
+        android:textColor="#05078c"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView13"
+        android:layout_toEndOf="@+id/textView13" />
+
+</RelativeLayout>

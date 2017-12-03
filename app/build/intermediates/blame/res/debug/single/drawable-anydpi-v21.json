@@ -12,10 +12,6 @@
         "source": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_vpn_key_black_24dp.xml"
     },
     {
-        "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_search_black_24dp.xml",
-        "source": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_search_black_24dp.xml"
-    },
-    {
         "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
         "source": "/Users/haivu/.android/build-cache/1daf18d05a984387380027811927bc5572b7cba1/output/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
     }

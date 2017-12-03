@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -23,6 +24,7 @@ public class Search extends AppCompatActivity {
     UserSession session;
     ImageView ibtnsearch;
     EditText edtsearch;
+    TextView searchsignout;
 
     // for tutors search
     ListView lvtutors;
@@ -31,7 +33,7 @@ public class Search extends AppCompatActivity {
 
     // for filter categories
     Spinner spfilter;
-
+    String stid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +44,15 @@ public class Search extends AppCompatActivity {
         ibtnsearch = (ImageView)findViewById(R.id.imsearch);
         spfilter = (Spinner)findViewById(R.id.spfilter);
         lvtutors = (ListView)findViewById(R.id.listtutors);
+        searchsignout = (TextView)findViewById(R.id.searchsignout);
 
         arrayTutors = new ArrayList<>();
         adapter = new tutorsAdapter(this, R.layout.each_tutor_view, arrayTutors);
         lvtutors.setAdapter(adapter);
+
+        Intent getintent = getIntent();
+        stid = getintent.getStringExtra("studentid");
+        getintent.removeExtra("studentid");
 
 
         // create database and session
@@ -78,39 +85,54 @@ public class Search extends AppCompatActivity {
                 }
             }
         });
+
+        searchsignout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent signout = new Intent(Search.this, MainActivity.class);
+                startActivity(signout);
+            }
+        });
     }
 
     // get tutors by name
     public void getTutors(){
         String searchname = edtsearch.getText().toString();
-        Cursor gettutors = database.GetData("SELECT tuname, tusubject, tubiography, turate, tuprice, tuemail FROM tutors WHERE tuname like '%" +searchname+ "%' order by turate DESC, tuname");
+        Cursor gettutors = database.GetData("SELECT * FROM tutors WHERE tuname like '%" +searchname+ "%' order by turate DESC, tuname");
         arrayTutors.clear();
         while (gettutors.moveToNext()){
-            String name = gettutors.getString(0);
-            String subject = gettutors.getString(1);
-            String biography = gettutors.getString(2);
-            double rate = gettutors.getDouble(3);
-            double price = gettutors.getDouble(4);
-            String email = gettutors.getString(5);
-            arrayTutors.add(new tutors(name, subject,biography, rate, price, email));
+            int id = gettutors.getInt(0);
+            String name = gettutors.getString(1);
+            String subject = gettutors.getString(2);
+            String biography = gettutors.getString(3);
+            String email = gettutors.getString(4);
+            String pass = gettutors.getString(5);
+            String phone = gettutors.getString(6);
+            double rate = gettutors.getDouble(7);
+            double price = gettutors.getDouble(8);
+
+            arrayTutors.add(new tutors(id, name, subject, biography, email, pass, phone, rate, price));
         }
         adapter.notifyDataSetChanged();
-
     }
 
     // get tutors by name and subject
     public void getSubTutors(String sub){
         String searchname = edtsearch.getText().toString();
-        Cursor gettutors = database.GetData("SELECT tuname, tusubject, tubiography, turate, tuprice, tuemail FROM tutors WHERE tuname like '%" +searchname+ "%' AND tusubject = '"+sub+"' order by turate DESC, tuname");
+        Cursor gettutors = database.GetData("SELECT * FROM tutors WHERE tuname like '%" +searchname+ "%' AND tusubject = '"+sub+"' order by turate DESC, tuname");
         arrayTutors.clear();
         while (gettutors.moveToNext()){
-            String name = gettutors.getString(0);
-            String subject = gettutors.getString(1);
-            String biography = gettutors.getString(2);
-            double rate = gettutors.getDouble(3);
-            double price = gettutors.getDouble(4);
-            String email = gettutors.getString(5);
-            arrayTutors.add(new tutors(name, subject,biography, rate, price, email));
+            int id = gettutors.getInt(0);
+            String name = gettutors.getString(1);
+            String subject = gettutors.getString(2);
+            String biography = gettutors.getString(3);
+            String email = gettutors.getString(4);
+            String pass = gettutors.getString(5);
+            String phone = gettutors.getString(6);
+            double rate = gettutors.getDouble(7);
+            double price = gettutors.getDouble(8);
+
+            arrayTutors.add(new tutors(id, name, subject, biography, email, pass, phone, rate, price));
         }
         adapter.notifyDataSetChanged();
     }
@@ -134,11 +156,13 @@ public class Search extends AppCompatActivity {
         b.setCancelable(true);
         b.setTitle(tutor.getTuname());
         b.setMessage("$"+tutor.getTuprice()+"/hr\n\n"+tutor.getTubiography());
-        final String tutorEmail = tutor.getTuemail();
+        final int tuid = tutor.getTuid();
         b.setPositiveButton("Make Appt", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent gotoappt = new Intent(Search.this,appointment.class);
+                gotoappt.putExtra("tutorid", tuid);
+                gotoappt.putExtra("studentid", stid);
                 startActivity(gotoappt);
             }
         });
@@ -146,13 +170,11 @@ public class Search extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent gotoview = new Intent(Search.this,viewtutor.class);
-                gotoview.putExtra("tutorEmail", tutorEmail);        // pass tutor email to viewtutor page
+                gotoview.putExtra("tutorid", tuid);
+                gotoview.putExtra("studentid", stid);
                 startActivity(gotoview);
-
             }
         });
-
-
         b.show();
     }
 

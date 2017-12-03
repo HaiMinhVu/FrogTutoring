@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haivu.frogtutoring.edit_tutor_profile"
+    android:padding="10dp"
+    android:background="@drawable/background">
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="#05078c"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="Edit Profile" />
+
+    <EditText
+        android:id="@+id/edemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:textColor="#05078c"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_below="@+id/textView5"
+        android:layout_toRightOf="@+id/textView9"
+        android:layout_toEndOf="@+id/textView9" />
+
+    <EditText
+        android:id="@+id/edphone"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/edemail"
+        android:layout_alignLeft="@+id/edemail"
+        android:layout_alignStart="@+id/edemail" />
+
+    <EditText
+        android:id="@+id/edsubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="#05078c"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/edphone"
+        android:layout_alignLeft="@+id/edphone"
+        android:layout_alignStart="@+id/edphone" />
+
+    <EditText
+        android:id="@+id/edbio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#05078c"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:layout_below="@+id/edprice"
+        android:layout_alignLeft="@+id/edprice"
+        android:layout_alignStart="@+id/edprice" />
+
+    <EditText
+        android:id="@+id/edprice"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@+id/edsubject"
+        android:layout_alignLeft="@+id/edsubject"
+        android:layout_alignStart="@+id/edsubject" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="20dp"
+        android:textColor="#05078c"
+        android:layout_alignBaseline="@+id/edemail"
+        android:layout_alignBottom="@+id/edemail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:textSize="20dp"
+        android:textColor="#05078c"
+        android:layout_alignBaseline="@+id/edphone"
+        android:layout_alignBottom="@+id/edphone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subject"
+        android:textSize="20dp"
+        android:textColor="#05078c"
+        android:layout_alignBaseline="@+id/edsubject"
+        android:layout_alignBottom="@+id/edsubject"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biography"
+        android:textSize="20dp"
+        android:textColor="#05078c"
+        android:layout_alignBaseline="@+id/edbio"
+        android:layout_alignBottom="@+id/edbio"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="20dp"
+        android:textColor="#05078c"
+        android:layout_alignBaseline="@+id/edprice"
+        android:layout_alignBottom="@+id/edprice"
+        android:layout_alignRight="@+id/textView6"
+        android:layout_alignEnd="@+id/textView6" />
+
+    <Button
+        android:id="@+id/btupdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#05078c"
+        android:text="Update"
+        android:layout_below="@+id/textView5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp" />
+
+    <TextView
+        android:id="@+id/edt_pro_signout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Out"
+        android:textColor="#05078c"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

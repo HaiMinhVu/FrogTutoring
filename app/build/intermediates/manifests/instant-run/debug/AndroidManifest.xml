@@ -28,6 +28,10 @@
         <activity android:name="com.haivu.frogtutoring.profile" />
         <activity android:name="com.haivu.frogtutoring.appointment" />
         <activity android:name="com.haivu.frogtutoring.viewtutor" />
+        <activity android:name="com.haivu.frogtutoring.profile_tutor" />
+        <activity android:name="com.haivu.frogtutoring.edit_tutor_profile" />
+        <activity android:name="com.haivu.frogtutoring.tutor_schedule" />
+        <activity android:name="com.haivu.frogtutoring.payment" />
 
         <provider
             android:name="com.android.tools.fd.runtime.InstantRunContentProvider"

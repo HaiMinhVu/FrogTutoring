@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/viewtutorname"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="tutor name" />
+
+    <TextView
+        android:id="@+id/viewdate"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="appt date" />
+
+    <TextView
+        android:id="@+id/apptstarttime"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/viewtutorname"
+        android:text="start time" />
+
+    <TextView
+        android:id="@+id/apptendtime"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/apptstarttime"
+        android:layout_alignLeft="@+id/viewdate"
+        android:layout_alignStart="@+id/viewdate"
+        android:text="end time" />
+</RelativeLayout>

@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.haivu.frogtutoring.viewtutor"
-    android:background="#81d7f2">
+    android:background="@drawable/background"
+    android:padding="10dp">
 
     <TextView
-        android:id="@+id/tvname"
+        android:id="@+id/tudetailname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tutor Name"
         android:textSize="30dp"
-        android:textColor="#ff00"
+        android:textColor="#05078c"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="61dp"
         android:layout_alignParentTop="true"
@@ -21,25 +22,26 @@
         android:layout_marginTop="46dp" />
 
     <TextView
-        android:id="@+id/tvprice"
+        android:id="@+id/tudetailprice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15dp"
         android:textColor="#05078c"
-        android:layout_below="@+id/tvname"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
-        android:text="Price" />
+        android:layout_marginTop="45dp"
+        android:text="Price"
+        android:layout_below="@+id/tudetailname"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/btnmakeppt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvprice"
         android:textColor="#05078c"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
-        android:text="Make Appointment" />
+        android:layout_marginTop="18dp"
+        android:text="Make Appointment"
+        android:layout_below="@+id/tudetailprice"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/reviewhis"
@@ -47,6 +49,7 @@
         android:text="Previous Reviews"
         android:textColor="#05078c"
         android:gravity="center"
+        android:textSize="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnmakeppt"/>
@@ -60,4 +63,26 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/reviewhis" />
+
+    <TextView
+        android:id="@+id/tudetailsubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:layout_below="@+id/tudetailname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#05078c"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/viewtutorsignout"
+        android:textColor="#05078c"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Sign Out" />
 </RelativeLayout>

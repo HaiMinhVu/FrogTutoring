@@ -7,16 +7,18 @@ public class tutors {
     private String tubiography;
     private String tuemail;
     private String tupass;
+    private String tuphone;
     private double turate;
     private double tuprice;
 
-    public tutors(int tuid, String tuname, String tusubject, String tubiography, String tuemail, String tupass, double turate, double tuprice) {
+    public tutors(int tuid, String tuname, String tusubject, String tubiography, String tuemail, String tupass, String tuphone, double turate, double tuprice) {
         this.tuid = tuid;
         this.tuname = tuname;
         this.tusubject = tusubject;
         this.tubiography = tubiography;
         this.tuemail = tuemail;
         this.tupass = tupass;
+        this.tuphone = tuphone;
         this.turate = turate;
         this.tuprice = tuprice;
 
@@ -25,7 +27,6 @@ public class tutors {
     public tutors(String tuname, String tusubject) {
         this.tuname = tuname;
         this.tusubject = tusubject;
-        //this.turate = turate;
     }
 
     public tutors(String tuname, String tusubject, String tubiography, double turate, double tuprice, String tuemail) {
@@ -83,6 +84,14 @@ public class tutors {
 
     public void setTupass(String tupass) {
         this.tupass = tupass;
+    }
+
+    public String getTuphone() {
+        return tuphone;
+    }
+
+    public void setTuphone(String tuphone) {
+        this.tuphone = tuphone;
     }
 
     public double getTurate() {

@@ -4,17 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.haivu.frogtutoring.appointment">
+    tools:context="com.haivu.frogtutoring.appointment"
+    android:padding="10dp"
+    android:background="@drawable/background">
 
-    <Button
-        android:id="@+id/btnConfirm"
+
+    <TextView
+        android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="CheckCheck"
-        android:text="Confirm"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp" />
+        android:layout_marginTop="23dp"
+        android:textSize="30dp"
+        android:text="Select Appointment"
+        android:textColor="#05078c"/>
 
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#05078c"
+        android:layout_marginTop="28dp"
+        android:textSize="15dp"
+        android:text="Student"
+        android:layout_below="@+id/textView14"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#05078c"
+        android:layout_marginTop="17dp"
+        android:text="Tutor"
+        android:layout_below="@+id/textView15"
+        android:layout_alignLeft="@+id/textView15"
+        android:layout_alignStart="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/studentname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#05078c"
+        android:text="student name"
+        android:textSize="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_alignBaseline="@+id/textView15"
+        android:layout_alignBottom="@+id/textView15"
+        android:layout_alignLeft="@+id/textView21"
+        android:layout_alignStart="@+id/textView21" />
+
+    <TextView
+        android:id="@+id/tutorname"
+        android:layout_width="wrap_content"
+        android:textColor="#05078c"
+        android:layout_height="wrap_content"
+        android:text="tutor name"
+        android:textSize="15dp"
+        android:layout_alignBaseline="@+id/textView17"
+        android:layout_alignBottom="@+id/textView17"
+        android:layout_alignLeft="@+id/studentname"
+        android:layout_alignStart="@+id/studentname" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#05078c"
+        android:layout_marginTop="34dp"
+        android:textSize="20dp"
+        android:text="Available Appointments"
+        android:layout_below="@+id/tutorname"
+        android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:id="@+id/lvavailable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView21"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/apptsignout"
+        android:layout_width="wrap_content"
+        android:textColor="#05078c"
+        android:textSize="15dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Sign Out" />
 
 </RelativeLayout>

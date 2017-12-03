@@ -1,22 +1,27 @@
 package com.haivu.frogtutoring;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
-import android.widget.Toast;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class appointment extends AppCompatActivity {
 
     DBManager database;
-    ScrollView sv;
-    LinearLayout ll;
-    CheckBox cb;
-
+    String stid;
+    int tuid, price, total;
+    ListView viewavailable;
+    ArrayList<tutor_schedule_class> arrayAvailable;
+    tutor_available_classAdapter availableAdapter;
+    TextView studentname, tutorname, apptsignout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,53 +31,99 @@ public class appointment extends AppCompatActivity {
         // create database
         database = new DBManager(this, "frogtutors.db", null, 1);
 
-        sv = new ScrollView(this);
-        ll = new LinearLayout(this);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        Button button = new Button(this);
+        studentname = (TextView)findViewById(R.id.studentname);
+        tutorname = (TextView)findViewById(R.id.tutorname);
+        apptsignout = (TextView)findViewById(R.id.apptsignout);
 
-        ll.addView(button, lp);
-        ll.setOrientation(LinearLayout.VERTICAL);
-        button.setText("Confirm");
-        sv.addView(ll);
+        Intent getintent = getIntent();
+        tuid = getintent.getIntExtra("tutorid",0);
+        stid = getintent.getStringExtra("studentid");
 
-        final Cursor cursor = database.GetData("select day, time, start, end from available where tuid = 1");
 
-        int i = 0;
-        while (cursor.moveToNext()) {
-            String day = cursor.getString(0);
-            String time = cursor.getString(1);
-            cb = new CheckBox(this);
-            cb.setText(day + " from " + time);
-            cb.setId(i);
-            ll.addView(cb);
-            i++;
+        Cursor stname = database.GetData("select stname from students where stid = '"+stid+"'");
+        StringBuffer sbstname = new StringBuffer();
+        while (stname.moveToNext()){
+            sbstname.append(stname.getString(0));
+        }
+        Cursor tuname = database.GetData("select tuname, tuprice from tutors where tuid = '"+tuid+"'");
+        StringBuffer sbtuname = new StringBuffer();
+        StringBuffer sbtuprice = new StringBuffer();
+        while (tuname.moveToNext()){
+            sbtuname.append(tuname.getString(0));
+            sbtuprice.append(tuname.getString(1));
         }
 
-        this.setContentView(sv);
+        studentname.setText(sbstname.toString());
+        tutorname.setText(sbtuname.toString());
+        price = Integer.parseInt(sbtuprice.toString());
 
-        button.setOnClickListener(new View.OnClickListener() {
+        viewavailable = (ListView)findViewById(R.id.lvavailable);
+        arrayAvailable = new ArrayList<>();
+        availableAdapter = new tutor_available_classAdapter(this, R.layout.each_tutor_available, arrayAvailable);
+        viewavailable.setAdapter(availableAdapter);
+
+        getavailable(tuid);
+        viewavailable.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
-                int i = 0;
-                cursor.moveToFirst();
-                do
-                {
-                    cb = (CheckBox) ll.findViewById(i);
-                    if(cb.isChecked())
-                    {
-                        int start = cursor.getInt(2);
-                        int end = cursor.getInt(3);
-                        MakeToast("From " + Integer.toString(start) + " to " + Integer.toString(end));
-                    }
-                    i++;
-                }while(cursor.moveToNext());
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                selectedAppt(arrayAvailable.get(i));
             }
         });
+
+        apptsignout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent signout = new Intent(appointment.this, MainActivity.class);
+                startActivity(signout);
+            }
+        });
+
     }
 
-    public void MakeToast(String output)
-    {
-        Toast.makeText(appointment.this, output, Toast.LENGTH_SHORT).show();
+    // display available
+    public void getavailable(int tuid){
+        Cursor dataSchedule = database.GetData("select * from tutorschedule where tuid = '"+tuid+"' and status = 1 order by tutorschedule.date");
+        arrayAvailable.clear();
+        while (dataSchedule.moveToNext()){
+            int id = dataSchedule.getInt(0);
+            int s_tuid = dataSchedule.getInt(1);
+            String date = dataSchedule.getString(2);
+            String start = dataSchedule.getString(3);
+            String end = dataSchedule.getString(4);
+            String duration = dataSchedule.getString(5);
+            int status = dataSchedule.getInt(6);
+            arrayAvailable.add(new tutor_schedule_class(id, s_tuid,date,start,end,duration,status));
+        }
+        availableAdapter.notifyDataSetChanged();
     }
+
+    public void selectedAppt(final tutor_schedule_class schedule){
+        AlertDialog.Builder b = new AlertDialog.Builder(this);
+        total = Integer.parseInt(schedule.getDuration()) * price;
+        b.setCancelable(true);
+        b.setTitle("View Selected Appointment");
+        b.setMessage("Student: " +studentname.getText().toString()+"\nTutor: "+tutorname.getText().toString()+  "\nDate: "+schedule.getDate()+"\nFrom: "+schedule.getStart()+"\nTo: "+schedule.getEnd()+"\nDuration: "+schedule.getDuration()+"\nTotal: $"+Integer.parseInt(schedule.getDuration())*price);
+        b.setPositiveButton("Make Appt", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent gotopayment = new Intent(appointment.this,payment.class);
+                gotopayment.putExtra("tutorid", tuid);
+                gotopayment.putExtra("studentid", stid);
+                gotopayment.putExtra("total", total);
+                gotopayment.putExtra("apptdate",schedule.getDate().toString());
+                gotopayment.putExtra("apptstart",schedule.getStart().toString());
+                gotopayment.putExtra("apptend",schedule.getEnd().toString());
+                gotopayment.putExtra("scheid",schedule.getScheid());
+                startActivity(gotopayment);
+            }
+        });
+        b.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        b.show();
+    }
+
 }

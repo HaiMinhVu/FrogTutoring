@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.haivu.frogtutoring.Search"
     android:padding="10dp"
-    android:background="#81d7f2">
+    android:background="@drawable/background">
 
     <ImageView
         android:paddingTop="5dp"
@@ -14,11 +14,9 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:srcCompat="@drawable/search"
-        android:layout_marginRight="12dp"
-        android:layout_marginEnd="12dp"
         android:layout_alignBottom="@+id/edtSearch"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignLeft="@+id/searchsignout"
+        android:layout_alignStart="@+id/searchsignout" />
 
     <TextView
         android:id="@+id/tvfilter"
@@ -27,7 +25,10 @@
         android:textColor="#05078c"
         android:textSize="20sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imsearch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:paddingTop="20dp"
@@ -35,10 +36,11 @@
         android:gravity="center"
         android:textColor="#05078c"
         android:id="@+id/edtSearch"
-        android:layout_toLeftOf="@id/imsearch"
-        android:layout_toRightOf="@id/tvfilter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/searchsignout"
+        android:layout_centerHorizontal="true" />
 
 
 
@@ -58,6 +60,17 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/spfilter" />
+
+    <TextView
+        android:id="@+id/searchsignout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Out"
+        android:textColor="#05078c"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>
