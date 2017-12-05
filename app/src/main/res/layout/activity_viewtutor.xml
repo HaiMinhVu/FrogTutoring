@@ -17,9 +17,9 @@
         android:textColor="#05078c"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="61dp"
+        android:layout_marginTop="28dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/tudetailprice"
@@ -75,14 +75,4 @@
         android:textColor="#05078c"
         android:text="TextView" />
 
-    <TextView
-        android:id="@+id/viewtutorsignout"
-        android:textColor="#05078c"
-        android:textSize="15dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:text="Sign Out" />
 </RelativeLayout>

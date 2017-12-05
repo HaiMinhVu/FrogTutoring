@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haivu.frogtutoring.legal"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/textView22"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp"
+        android:text="About"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView22"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:text="Developers"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView25"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Hai Minh Vu - hai.vu@mavs.uta.edu" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView29"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="Seth Tisbi - seth-amittai.tisbi@mavs.uta.edu" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView27"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="Awet Tesfamariam - awet.tesfamariam@mavs.uta.edu" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView26"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="Iqbal Sukur - iqbal.sukur@mavs.uta.edu" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView28"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:text="Functionality"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView30"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="SDK version: 25" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView31"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="Build Tool Version: 26.0.2" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="FrogTutor: V1.0" />
+
+
+</RelativeLayout>

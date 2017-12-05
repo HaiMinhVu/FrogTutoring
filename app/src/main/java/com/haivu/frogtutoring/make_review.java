@@ -2,14 +2,17 @@ package com.haivu.frogtutoring;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-public class make_review extends AppCompatActivity {
+import static com.haivu.frogtutoring.R.id.back;
+
+public class make_review extends BaseActivity {
 
     DBManager database;
     String stid, tuname;
@@ -64,4 +67,18 @@ public class make_review extends AppCompatActivity {
         });
 
     }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_items,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == back){
+            Intent back2profile = new Intent(make_review.this,profile.class);
+            back2profile.putExtra("studentid", stid);
+            startActivity(back2profile);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

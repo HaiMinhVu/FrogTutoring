@@ -3,7 +3,8 @@ package com.haivu.frogtutoring;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -11,7 +12,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class viewtutor extends AppCompatActivity {
+import static com.haivu.frogtutoring.R.id.back;
+
+public class viewtutor extends BaseActivity {
 
     DBManager database;
 
@@ -19,7 +22,7 @@ public class viewtutor extends AppCompatActivity {
     ArrayList<reviews> arrayReviews;
     viewtutorAdapter adapter;
 
-    TextView name, price, subject, viewtutorsignout;
+    TextView name, price, subject;
     Button makeappt;
     int tuid;
     String stid;
@@ -37,7 +40,6 @@ public class viewtutor extends AppCompatActivity {
         name = (TextView)findViewById(R.id.tudetailname) ;
         price = (TextView)findViewById(R.id.tudetailprice);
         subject = (TextView)findViewById(R.id.tudetailsubject);
-        viewtutorsignout = (TextView)findViewById(R.id.viewtutorsignout);
         makeappt = (Button)findViewById(R.id.btnmakeppt);
         // create database
         database = new DBManager(this, "frogtutors.db", null, 1);
@@ -69,13 +71,6 @@ public class viewtutor extends AppCompatActivity {
                 startActivity(gotoappt);
             }
         });
-        viewtutorsignout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent signout = new Intent(viewtutor.this, MainActivity.class);
-                startActivity(signout);
-            }
-        });
     }
 
     public void getReview(int tuid){
@@ -88,6 +83,19 @@ public class viewtutor extends AppCompatActivity {
         }
         adapter.notifyDataSetChanged();
 
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_items,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == back){
+            Intent back2profile = new Intent(viewtutor.this,profile.class);
+            back2profile.putExtra("studentid", stid);
+            startActivity(back2profile);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

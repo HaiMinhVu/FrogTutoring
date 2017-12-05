@@ -5,7 +5,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -13,7 +14,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class appointment extends AppCompatActivity {
+import static com.haivu.frogtutoring.R.id.back;
+
+public class appointment extends BaseActivity {
 
     DBManager database;
     String stid;
@@ -21,7 +24,7 @@ public class appointment extends AppCompatActivity {
     ListView viewavailable;
     ArrayList<tutor_schedule_class> arrayAvailable;
     tutor_available_classAdapter availableAdapter;
-    TextView studentname, tutorname, apptsignout;
+    TextView studentname, tutorname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +36,6 @@ public class appointment extends AppCompatActivity {
 
         studentname = (TextView)findViewById(R.id.studentname);
         tutorname = (TextView)findViewById(R.id.tutorname);
-        apptsignout = (TextView)findViewById(R.id.apptsignout);
 
         Intent getintent = getIntent();
         tuid = getintent.getIntExtra("tutorid",0);
@@ -70,15 +72,21 @@ public class appointment extends AppCompatActivity {
             }
         });
 
-        apptsignout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent signout = new Intent(appointment.this, MainActivity.class);
-                startActivity(signout);
-            }
-        });
-
     }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_items,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == back){
+            Intent back2profile = new Intent(appointment.this,profile.class);
+            back2profile.putExtra("studentid", stid);
+            startActivity(back2profile);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
     // display available
     public void getavailable(int tuid){

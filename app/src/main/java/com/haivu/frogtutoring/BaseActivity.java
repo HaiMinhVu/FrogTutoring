@@ -20,9 +20,12 @@ public class BaseActivity extends AppCompatActivity implements
     private Toolbar toolbar;
     private ActionBarDrawerToggle drawerToggle;
     private int selectedNavItemId;
+    UserSession session;
 
     @Override
     public void setContentView(@LayoutRes int layoutResID) {
+        session = new UserSession(this);
+
         /**
          * This is going to be our actual root layout.
          */
@@ -40,6 +43,7 @@ public class BaseActivity extends AppCompatActivity implements
         super.setContentView(fullLayout);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         navigationView = (NavigationView) findViewById(R.id.navigationView);
 
         if (useToolbar())
@@ -112,18 +116,23 @@ public class BaseActivity extends AppCompatActivity implements
         //noinspection SimplifiableIfStatement
         switch (id)
         {
-            case R.id.action_main:
-                startActivity(new Intent(this, MainActivity.class));
+            case R.id.logout:{
+                session.setLoggedin(false);
+                Intent signout = new Intent(this, MainActivity.class);
+                startActivity(signout);
                 return true;
+            }
+            case R.id.contact:{
+                startActivity(new Intent(BaseActivity.this,contact_us.class));
+                return true;
+            }
+            case R.id.legal:{
+                startActivity(new Intent(BaseActivity.this,legal.class));
+                return true;
+            }
 
-            case R.id.action_contact:
-                setContentView(R.layout.activity_contact);
-                return true;
-
-            case R.id.action_readme:
-                setContentView(R.layout.activity_readme);
-                return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

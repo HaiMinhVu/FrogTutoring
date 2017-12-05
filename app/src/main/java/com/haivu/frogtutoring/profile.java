@@ -3,7 +3,6 @@ package com.haivu.frogtutoring;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -16,13 +15,13 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-public class profile extends AppCompatActivity {
+public class profile extends BaseActivity {
 
     DBManager database;
     Button btnsearch;
     Calendar currentdate;
     SimpleDateFormat simpledate;
-    TextView tvlogout, tvstname, tvstemail, tvstphone;
+    TextView tvstname, tvstemail, tvstphone;
     UserSession session;
     String stid;
     ListView lvcomingupappt, lvpastappt;
@@ -39,7 +38,6 @@ public class profile extends AppCompatActivity {
 
         simpledate = new SimpleDateFormat("yyyy-MM-dd");
         btnsearch = (Button)findViewById(R.id.btnSearch);
-        tvlogout = (TextView)findViewById(R.id.tvsignout);
         tvstname = (TextView)findViewById(R.id.tvstname);
         tvstemail = (TextView)findViewById(R.id.tvdisplayemail);
         tvstphone = (TextView)findViewById(R.id.tvdisplayphone);
@@ -70,15 +68,6 @@ public class profile extends AppCompatActivity {
         tvstemail.setText(sbemail.toString());
         tvstphone.setText(sbphone.toString());
 
-        tvlogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                session.setLoggedin(false);
-                Intent backtomain = new Intent(profile.this,MainActivity.class);
-                startActivity(backtomain);
-
-            }
-        });
         btnsearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -100,6 +89,10 @@ public class profile extends AppCompatActivity {
         });
 
     }
+
+
+
+
 
     public void gettutorinfo(student_appointment_class appt){
         int tuid = appt.getTuid();

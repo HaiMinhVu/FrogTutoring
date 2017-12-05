@@ -172,6 +172,10 @@
         "source": "/Users/haivu/Desktop/FrogTutoring/app/src/main/res/layout/each_tutor_available.xml"
     },
     {
+        "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/layout/activity_contact_us.xml",
+        "source": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/res/layout/activity_contact_us.xml"
+    },
+    {
         "merged": "/Users/haivu/Desktop/FrogTutoring/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
         "source": "/Users/haivu/.android/build-cache/1daf18d05a984387380027811927bc5572b7cba1/output/res/layout/design_bottom_sheet_dialog.xml"
     },
@@ -196,12 +200,20 @@
         "source": "/Users/haivu/.android/build-cache/1daf18d05a984387380027811927bc5572b7cba1/output/res/layout/design_bottom_navigation_item.xml"
     },
     {
+        "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/layout/toolbar.xml",
+        "source": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/res/layout/toolbar.xml"
+    },
+    {
         "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
         "source": "/Users/haivu/.android/build-cache/f934894fe828688fdaff66193a9810d459ae5a2e/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
         "source": "/Users/haivu/.android/build-cache/f934894fe828688fdaff66193a9810d459ae5a2e/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/layout/activity_legal.xml",
+        "source": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/res/layout/activity_legal.xml"
     },
     {
         "merged": "/Users/haivu/Desktop/FrogTutoring/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",

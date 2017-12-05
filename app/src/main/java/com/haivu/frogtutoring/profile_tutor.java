@@ -3,18 +3,17 @@ package com.haivu.frogtutoring;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import static com.haivu.frogtutoring.R.id.tvstname;
 
-public class profile_tutor extends AppCompatActivity {
+public class profile_tutor extends BaseActivity {
 
     DBManager database;
     Button btnupdateprofile, btneditschedule;
-    TextView tvlogout, tvtuname, tvtuemail, tvtuphone, tvtusubject, tvtubio, tvturating;
+    TextView tvtuname, tvtuemail, tvtuphone, tvtusubject, tvtubio, tvturating;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +22,6 @@ public class profile_tutor extends AppCompatActivity {
 
         database = new DBManager(this, "frogtutors.db", null, 1);
 
-        tvlogout = (TextView)findViewById(R.id.tvsignout);
         tvtuname = (TextView)findViewById(tvstname);
         tvtuemail = (TextView)findViewById(R.id.tvdisplayemail);
         tvtuphone = (TextView)findViewById(R.id.tvdisplayphone);
@@ -58,13 +56,6 @@ public class profile_tutor extends AppCompatActivity {
         tvtusubject.setText(sbtusubject.toString());
         tvtubio.setText(sbtubiography.toString());
         tvturating.setText("$"+sbtuprice.toString()+"/hour");
-
-        tvlogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(profile_tutor.this, MainActivity.class));
-            }
-        });
 
         btnupdateprofile.setOnClickListener(new View.OnClickListener() {
             @Override

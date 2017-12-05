@@ -9,6 +9,7 @@
     android:background="@drawable/background">
 
 
+
     <Button
         android:foregroundGravity="center"
         android:id="@+id/btnSearch"
@@ -22,16 +23,6 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:id="@+id/tvsignout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:textColor="#05078c"
-        android:textSize="15dp"
-        android:text="Sign Out" />
-    <TextView
         android:gravity="center"
         android:includeFontPadding="false"
         android:id="@+id/tvstname"
@@ -41,7 +32,7 @@
         android:text="Name"
         android:textSize="30dp"
         android:textColor="#05078c"
-        android:layout_below="@+id/tvsignout"
+        android:layout_below="@+id/toolbar"
         android:layout_centerHorizontal="true" />
 
     <TextView

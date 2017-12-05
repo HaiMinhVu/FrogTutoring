@@ -7,7 +7,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -20,10 +21,12 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class tutor_schedule extends AppCompatActivity {
+import static com.haivu.frogtutoring.R.id.back;
+
+public class tutor_schedule extends BaseActivity {
 
     DBManager database;
-    TextView tvpickdate, tvstart, tvend, tuschesignout;
+    TextView tvpickdate, tvstart, tvend;
     Calendar time1, time2, day;
     Button add, cancel;
     SimpleDateFormat simpledate, simplehour;
@@ -43,7 +46,6 @@ public class tutor_schedule extends AppCompatActivity {
         tvpickdate = (TextView)findViewById(R.id.tvpickdate);
         tvstart = (TextView)findViewById(R.id.tvstarttime);
         tvend = (TextView)findViewById(R.id.tvendtime);
-        tuschesignout = (TextView)findViewById(R.id.tuschesignout);
         add = (Button)findViewById(R.id.btnaddschedule);
         cancel = (Button)findViewById(R.id.btncancelschedule);
 
@@ -105,13 +107,6 @@ public class tutor_schedule extends AppCompatActivity {
                 Intent back2tutor = new Intent(tutor_schedule.this, profile_tutor.class);
                 back2tutor.putExtra("tutorid", tuid);
                 startActivity(back2tutor);
-            }
-        });
-
-        tuschesignout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(tutor_schedule.this,MainActivity.class));
             }
         });
 
@@ -195,6 +190,18 @@ public class tutor_schedule extends AppCompatActivity {
         date1.show();
     }
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_items,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == back){
+            Intent back2profile = new Intent(tutor_schedule.this,profile_tutor.class);
+            back2profile.putExtra("tutorid", tuid);
+            startActivity(back2profile);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 
 }

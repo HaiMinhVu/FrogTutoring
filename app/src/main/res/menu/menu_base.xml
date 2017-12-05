@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
-        android:id="@+id/action_main"
-        android:title="Profile"/>
-    <item
-        android:id="@+id/action_contact"
-        android:title="Contact"/>
-    <item
-        android:id="@+id/action_readme"
-        android:title="ReadMe"/>
+        android:id="@+id/contact"
+        android:icon="@drawable/iconcontact"
+        android:title="Contact Us"
+        app:showAsAction="never"
+        android:orderInCategory="2"/>
+
+    <item android:id="@+id/legal"
+        android:title="Legal"
+        android:icon="@drawable/iconlegal"
+        android:orderInCategory="1"
+        app:showAsAction="never"/>
+
+    <item android:title="Log Out"
+        android:id="@+id/logout"
+        android:icon="@drawable/iconlogout"
+        android:orderInCategory="4"
+        app:showAsAction="never"/>
 
 </menu>

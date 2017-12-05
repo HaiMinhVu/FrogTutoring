@@ -26,7 +26,9 @@
         <activity android:name=".edit_tutor_profile" />
         <activity android:name=".tutor_schedule" />
         <activity android:name=".payment" />
-        <activity android:name=".make_review"></activity>
+        <activity android:name=".make_review" />
+        <activity android:name=".contact_us" />
+        <activity android:name=".legal"></activity>
     </application>
 
 </manifest>

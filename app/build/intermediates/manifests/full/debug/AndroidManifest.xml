@@ -33,6 +33,8 @@
         <activity android:name="com.haivu.frogtutoring.tutor_schedule" />
         <activity android:name="com.haivu.frogtutoring.payment" />
         <activity android:name="com.haivu.frogtutoring.make_review" />
+        <activity android:name="com.haivu.frogtutoring.contact_us" />
+        <activity android:name="com.haivu.frogtutoring.legal" />
     </application>
 
 </manifest>

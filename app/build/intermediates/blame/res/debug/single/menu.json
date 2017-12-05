@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/menu/menu_items.xml",
+        "source": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/res/menu/menu_items.xml"
+    },
+    {
         "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/menu/menu_base.xml",
         "source": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/res/menu/menu_base.xml"
     },

@@ -3,18 +3,19 @@ package com.haivu.frogtutoring;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
-public class edit_tutor_profile extends AppCompatActivity {
+import static com.haivu.frogtutoring.R.id.back;
+
+public class edit_tutor_profile extends BaseActivity {
 
     DBManager database;
     EditText edemail, edphone, edsubject, edbio, edprice;
     Button btupdate;
-    TextView edtsignout;
     String tuid;
 
     @Override
@@ -30,7 +31,6 @@ public class edit_tutor_profile extends AppCompatActivity {
         edbio = (EditText)findViewById(R.id.edbio);
         edprice = (EditText)findViewById(R.id.edprice);
         btupdate = (Button)findViewById(R.id.btupdate);
-        edtsignout = (TextView)findViewById(R.id.edt_pro_signout);
 
         Intent getintent = getIntent();
         tuid = getintent.getStringExtra("tutorid");
@@ -71,15 +71,21 @@ public class edit_tutor_profile extends AppCompatActivity {
                 Intent back2tutorprofile = new Intent(edit_tutor_profile.this, profile_tutor.class);
                 back2tutorprofile.putExtra("tutorid",tuid);
                 startActivity(back2tutorprofile);
-
-            }
-        });
-
-        edtsignout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(edit_tutor_profile.this, MainActivity.class));
             }
         });
     }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_items,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == back){
+            Intent back2profile = new Intent(edit_tutor_profile.this,profile_tutor.class);
+            back2profile.putExtra("tutorid", tuid);
+            startActivity(back2profile);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

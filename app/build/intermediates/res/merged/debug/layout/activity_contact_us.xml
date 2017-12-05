@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haivu.frogtutoring.contact_us"
+    android:background="@drawable/background">
+
+    <TextView
+        android:textColor="#05078c"
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp"
+        android:text="Contact Us"
+        android:textSize="30sp" />
+
+    <RadioGroup
+        android:id="@+id/radiocontact"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/textView22"
+        android:layout_alignLeft="@+id/textView22"
+        android:layout_alignStart="@+id/textView22"
+        android:layout_alignRight="@+id/textView22"
+        android:layout_alignEnd="@+id/textView22">
+
+        <RadioButton
+            android:textColor="#05078c"
+            android:id="@+id/radiophone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By Phone" />
+
+        <RadioButton
+            android:textColor="#05078c"
+            android:id="@+id/radioemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By Email" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvphoneoremail"
+        android:textSize="15dp"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Or Email"
+        android:layout_alignBaseline="@+id/enterphoneoremail"
+        android:layout_alignBottom="@+id/enterphoneoremail"
+        android:layout_toLeftOf="@+id/radiocontact"
+        android:layout_toStartOf="@+id/radiocontact" />
+
+    <EditText
+        android:id="@+id/enterphoneoremail"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/radiocontact"
+        android:layout_toRightOf="@+id/tvphoneoremail"
+        android:layout_toEndOf="@+id/tvphoneoremail" />
+
+    <TextView
+        android:id="@+id/tvcomment"
+        android:textSize="15dp"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enterphoneoremail"
+        android:layout_marginTop="35dp"
+        android:layout_toLeftOf="@+id/enterphoneoremail"
+        android:layout_toStartOf="@+id/enterphoneoremail"
+        android:text="Your Comment" />
+
+    <EditText
+        android:id="@+id/entercomment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:layout_alignBaseline="@+id/tvcomment"
+        android:layout_alignBottom="@+id/tvcomment"
+        android:layout_toRightOf="@+id/tvcomment"
+        android:layout_toEndOf="@+id/tvcomment" />
+
+    <Button
+        android:id="@+id/contactcancael"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvcomment"
+        android:layout_alignStart="@+id/tvcomment"
+        android:layout_below="@+id/entercomment"
+        android:layout_marginLeft="63dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="59dp"
+        android:text="cancel" />
+
+    <Button
+        android:id="@+id/contactsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/entercomment"
+        android:layout_alignRight="@+id/entercomment"
+        android:layout_alignTop="@+id/contactcancael"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
+        android:text="submit" />
+
+</RelativeLayout>

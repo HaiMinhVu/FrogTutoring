@@ -5,7 +5,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,18 +14,18 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Search extends AppCompatActivity {
+import static com.haivu.frogtutoring.R.id.back;
+
+public class Search extends BaseActivity {
 
     // database
     DBManager database;
     UserSession session;
     ImageView ibtnsearch;
     EditText edtsearch;
-    TextView searchsignout;
 
     // for tutors search
     ListView lvtutors;
@@ -44,7 +45,6 @@ public class Search extends AppCompatActivity {
         ibtnsearch = (ImageView)findViewById(R.id.imsearch);
         spfilter = (Spinner)findViewById(R.id.spfilter);
         lvtutors = (ListView)findViewById(R.id.listtutors);
-        searchsignout = (TextView)findViewById(R.id.searchsignout);
 
         arrayTutors = new ArrayList<>();
         adapter = new tutorsAdapter(this, R.layout.each_tutor_view, arrayTutors);
@@ -85,14 +85,19 @@ public class Search extends AppCompatActivity {
                 }
             }
         });
+    }
 
-        searchsignout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent signout = new Intent(Search.this, MainActivity.class);
-                startActivity(signout);
-            }
-        });
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_items,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == back){
+            Intent back2profile = new Intent(Search.this,profile.class);
+            back2profile.putExtra("studentid", stid);
+            startActivity(back2profile);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     // get tutors by name
