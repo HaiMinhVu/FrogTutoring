@@ -100,7 +100,7 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:textColor="#05078c"
-        android:text="Coming Up Appointment"
+        android:text="Up Coming Appointment"
         android:layout_below="@+id/btnSearch"
         android:layout_centerHorizontal="true" />
 
@@ -110,7 +110,7 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:textColor="#05078c"
-        android:text="Finished Appointment"
+        android:text="Past Appointment"
         android:layout_below="@+id/lvcomingupappt"
         android:layout_centerHorizontal="true" />
 

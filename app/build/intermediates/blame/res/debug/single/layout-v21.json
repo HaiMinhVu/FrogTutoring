@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/haivu/Desktop/FrogTutoring/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/haivu/.android/build-cache/f934894fe828688fdaff66193a9810d459ae5a2e/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
         "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
         "source": "/Users/haivu/.android/build-cache/f934894fe828688fdaff66193a9810d459ae5a2e/output/res/layout-v21/notification_action_tombstone.xml"
     },
@@ -8,7 +12,19 @@
         "source": "/Users/haivu/.android/build-cache/f934894fe828688fdaff66193a9810d459ae5a2e/output/res/layout-v21/notification_action.xml"
     },
     {
+        "merged": "/Users/haivu/Desktop/FrogTutoring/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/haivu/.android/build-cache/f934894fe828688fdaff66193a9810d459ae5a2e/output/res/layout-v21/notification_action.xml"
+    },
+    {
         "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/haivu/.android/build-cache/f934894fe828688fdaff66193a9810d459ae5a2e/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/haivu/Desktop/FrogTutoring/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/haivu/.android/build-cache/f934894fe828688fdaff66193a9810d459ae5a2e/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/haivu/Desktop/FrogTutoring/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
         "source": "/Users/haivu/.android/build-cache/f934894fe828688fdaff66193a9810d459ae5a2e/output/res/layout-v21/notification_template_custom_big.xml"
     },
     {

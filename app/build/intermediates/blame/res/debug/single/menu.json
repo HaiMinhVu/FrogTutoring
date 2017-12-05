@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/menu/menu_base.xml",
+        "source": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/res/menu/menu_base.xml"
+    },
+    {
+        "merged": "/Users/haivu/Desktop/FrogTutoring/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/haivu/Desktop/FrogTutoring/app/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/Users/haivu/Desktop/FrogTutoring/app/build/intermediates/res/merged/debug/menu/menu_base.xml",
+        "source": "/Users/haivu/Desktop/FrogTutoring/app/src/main/res/menu/menu_base.xml"
+    },
+    {
+        "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/res/menu/menu_main.xml"
+    }
+]

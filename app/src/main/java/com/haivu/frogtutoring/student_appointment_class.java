@@ -25,6 +25,15 @@ public class student_appointment_class {
         this.apptstatus = apptstatus;
     }
 
+    public student_appointment_class(String tuname, String date, String starttime, String endtime, int stapptid, int tuid) {
+        this.tuname = tuname;
+        this.date = date;
+        this.starttime = starttime;
+        this.endtime = endtime;
+        this.stapptid = stapptid;
+        this.tuid = tuid;
+    }
+
     public student_appointment_class(String tuname, String date, String starttime, String endtime) {
         this.tuname = tuname;
         this.date = date;

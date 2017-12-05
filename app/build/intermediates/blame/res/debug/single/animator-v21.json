@@ -2,5 +2,9 @@
     {
         "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/animator-v21/design_appbar_state_list_animator.xml",
         "source": "/Users/haivu/.android/build-cache/1daf18d05a984387380027811927bc5572b7cba1/output/res/animator-v21/design_appbar_state_list_animator.xml"
+    },
+    {
+        "merged": "/Users/haivu/Desktop/FrogTutoring/app/build/intermediates/res/merged/debug/animator-v21/design_appbar_state_list_animator.xml",
+        "source": "/Users/haivu/.android/build-cache/1daf18d05a984387380027811927bc5572b7cba1/output/res/animator-v21/design_appbar_state_list_animator.xml"
     }
 ]

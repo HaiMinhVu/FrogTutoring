@@ -1,7 +1,15 @@
 [
     {
+        "merged": "/Users/haivu/Desktop/FrogTutoring/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher_round.png",
+        "source": "/Users/haivu/Desktop/FrogTutoring/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
         "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher_round.png",
         "source": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/haivu/Desktop/FrogTutoring/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/Users/haivu/Desktop/FrogTutoring/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/haivu/Desktop/Android Studio/FrogTutoring/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",

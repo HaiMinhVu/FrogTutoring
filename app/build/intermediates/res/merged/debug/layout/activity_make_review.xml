@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haivu.frogtutoring.make_review"
+    android:background="@drawable/background">
+
+    <EditText
+        android:id="@+id/review_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="#05078c"
+        android:hint="Leave a comment"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginBottom="68dp"
+        android:layout_above="@+id/review_comment"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/mkreviewsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="#05078c"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="100dp"
+        android:layout_below="@+id/review_comment"
+        android:layout_alignRight="@+id/review_comment"
+        android:layout_alignEnd="@+id/review_comment" />
+
+    <Button
+        android:id="@+id/mkreviewcancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textColor="#05078c"
+        android:layout_alignBaseline="@+id/mkreviewsubmit"
+        android:layout_alignBottom="@+id/mkreviewsubmit"
+        android:layout_alignLeft="@+id/review_comment"
+        android:layout_alignStart="@+id/review_comment" />
+
+    <TextView
+        android:id="@+id/mkreviewname"
+        android:textSize="30dp"
+        android:textColor="#05078c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ratingBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="tutor name" />
+
+</RelativeLayout>

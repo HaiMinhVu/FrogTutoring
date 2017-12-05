@@ -99,7 +99,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:text="Coming Up Appointment"
+        android:textColor="#05078c"
+        android:text="Up Coming Appointment"
         android:layout_below="@+id/btnSearch"
         android:layout_centerHorizontal="true" />
 
@@ -108,7 +109,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:text="Finished Appointment"
+        android:textColor="#05078c"
+        android:text="Past Appointment"
         android:layout_below="@+id/lvcomingupappt"
         android:layout_centerHorizontal="true" />
 

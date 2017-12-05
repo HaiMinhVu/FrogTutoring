@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -14,7 +15,6 @@ import java.util.List;
  */
 
 public class tutorsAdapter extends BaseAdapter {
-
 
 
     private Context context;
@@ -49,7 +49,7 @@ public class tutorsAdapter extends BaseAdapter {
     @Override
     public View getView(final int i, View view, ViewGroup viewGroup) {
         ViewHolder holder;
-
+        DecimalFormat df = new DecimalFormat("#.#");
         if(view == null){
             holder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -62,11 +62,10 @@ public class tutorsAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
         final tutors tutor = listTutors.get(i);
+        String rating = df.format(tutor.getTurate());
         holder.tvtuname.setText(tutor.getTuname());
         holder.tvtusubject.setText(tutor.getTusubject());
-        holder.tvturate.setText(Double.toString(tutor.getTurate()));
-
-
+        holder.tvturate.setText(rating);
 
         return view;
     }

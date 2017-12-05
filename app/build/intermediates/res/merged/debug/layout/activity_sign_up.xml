@@ -99,7 +99,7 @@
         android:layout_marginTop="28dp"
         android:text="Sign Up"
         android:textSize="40dp"
-        android:textColor="#ff00"/>
+        android:textColor="#05078c"/>
 
 
     <RadioGroup

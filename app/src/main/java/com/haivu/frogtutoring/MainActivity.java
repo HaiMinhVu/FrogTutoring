@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
         database = new DBManager(this, "frogtutors.db", null, 1);
         database.QueryData("CREATE TABLE IF NOT EXISTS tutors(tuid INTEGER PRIMARY KEY AUTOINCREMENT, tuname TEXT, tusubject TEXT, tubiography TEXT, tuemail TEXT, tupass TEXT, tuphone TEXT, turate REAL, tuprice REAL)");
         database.QueryData("CREATE TABLE IF NOT EXISTS students(stid INTEGER PRIMARY KEY AUTOINCREMENT, stname TEXT NOT NULL, stemail TEXT NOT NULL, stpass TEXT NOT NULL, stphone TEXT)");
-        database.QueryData("CREATE TABLE IF NOT EXISTS review(tuid INTEGER, stid INTEGER, comment TEXT, rate REAL, count INTEGER, PRIMARY KEY(tuid, stid))");
+        database.QueryData("CREATE TABLE IF NOT EXISTS review(tuid INTEGER, stid INTEGER, comment TEXT, rate INTEGER)");
         database.QueryData("CREATE TABLE IF NOT EXISTS tutorschedule(scheID INTEGER PRIMARY KEY AUTOINCREMENT, tuid INTEGER, date TEXT, starttime TEXT, endtime TEXT, duration REAL, status INTEGER)");
-        database.QueryData("CREATE TABLE IF NOT EXISTS studentappointment(apptID INTEGER PRIMARY KEY AUTOINCREMENT, tuid INTEGER, stid INTEGER, apptdate TEXT, apptstart TEXT, apptend TEXT, appstatus INTEGER)");
+        database.QueryData("CREATE TABLE IF NOT EXISTS studentappointment(apptID INTEGER PRIMARY KEY AUTOINCREMENT, tuid INTEGER, stid INTEGER, apptdate TEXT, apptstart TEXT, apptend TEXT, apptstatus INTEGER)");
 
 
 
@@ -163,37 +163,20 @@ public class MainActivity extends AppCompatActivity {
  database.QueryData("INSERT INTO tutors VALUES(null, 'Bailey White', 'science', 'After practicing Computer Science in industry and product development for 8 years I returned to university for an MS in Computer Science at The University of Texas at Dallas. BSCS in 1988 summa cum laude, MSCS in 1990, plus additional graduate work.', 's.alex@gmail.com', '2345678765', '123456', null, 35)");
 
  database.QueryData("INSERT INTO students VALUES(null, 'Iqbal', 'iqbal@yahoo.com', '123456', '8176453678')");
- database.QueryData("INSERT INTO students VALUES(null, 'Minh', 'minh@email.com', '123456', '4696423678')");
+ database.QueryData("INSERT INTO students VALUES(null, 'Minh', 'minh@email.com', '123456', '6825594341')");
  database.QueryData("INSERT INTO students VALUES(null, 'AWet', 'awet@gmail.com', '123456', '2146477678')");
  database.QueryData("INSERT INTO students VALUES(null, 'Seth', 'seth@yahoo.com', '123456', '8176678278')");
  database.QueryData("INSERT INTO students VALUES(null, 'Ann', 'ann@yahoo.com', '123456', '8776153678')");
 
- database.QueryData("INSERT INTO available VALUES(1, 'MON', '2pm-4pm')");
- database.QueryData("INSERT INTO available VALUES(1, 'MON', '6pm-8pm')");
- database.QueryData("INSERT INTO available VALUES(1, 'WED', '1pm-3pm')");
- database.QueryData("INSERT INTO available VALUES(1, 'FRI', '9am-11am')");
- database.QueryData("INSERT INTO available VALUES(2, 'MON', '9am-11am')");
- database.QueryData("INSERT INTO available VALUES(2, 'TUE', '11am-1pm')");
- database.QueryData("INSERT INTO available VALUES(2, 'SAT', '2pm-4pm')");
- database.QueryData("INSERT INTO available VALUES(3, 'WED', '9am-11am')");
- database.QueryData("INSERT INTO available VALUES(3, 'THU', '8am-10am')");
- database.QueryData("INSERT INTO available VALUES(3, 'FRI', '9am-11am')");
- database.QueryData("INSERT INTO available VALUES(4, 'MON', '4pm-6pm')");
- database.QueryData("INSERT INTO available VALUES(4, 'WED', '5pm-7pm')");
- database.QueryData("INSERT INTO available VALUES(4, 'MON', '4pm-6pm')");
- database.QueryData("INSERT INTO available VALUES(5, 'THU', '2pm-4pm')");
- database.QueryData("INSERT INTO available VALUES(5, 'FRI', '1pm-3pm')");
- database.QueryData("INSERT INTO available VALUES(5, 'SAT', '9am-11am')");
-
- database.QueryData("INSERT INTO review VALUES(1, 1, 'fair tutor, would recommend this', 3, 0)");
- database.QueryData("INSERT INTO review VALUES(1, 2, 'Great tutor, knows everything you would ask', 4, 0)");
- database.QueryData("INSERT INTO review VALUES(1, 5, 'Very detail explaination and prepared for before tutoring',5, 0)");
- database.QueryData("INSERT INTO review VALUES(2, 3, 'Bad tutor, would not recommend this guy',1, 0)");
- database.QueryData("INSERT INTO review VALUES(2, 4, 'so far so good with this tutor',4, 0)");
- database.QueryData("INSERT INTO review VALUES(3, 1, 'Make an A for the test after taking this tutor',4, 0)");
- database.QueryData("INSERT INTO review VALUES(3, 2, 'not really good, but ok',3, 0)");
- database.QueryData("INSERT INTO review VALUES(4, 2, 'good and fair price tutor',4, 0)");
- database.QueryData("INSERT INTO review VALUES(4, 3, 'great tutor ever',5, 0)");
- database.QueryData("INSERT INTO review VALUES(5, 5, 'this guy is good, but not really an expert',3, 0)");
+ database.QueryData("INSERT INTO review VALUES(1, 1, 'fair tutor, would recommend this', 3)");
+ database.QueryData("INSERT INTO review VALUES(1, 2, 'Great tutor, knows everything you would ask', 4)");
+ database.QueryData("INSERT INTO review VALUES(1, 5, 'Very detail explaination and prepared for before tutoring',5)");
+ database.QueryData("INSERT INTO review VALUES(2, 3, 'Bad tutor, would not recommend this guy',1)");
+ database.QueryData("INSERT INTO review VALUES(2, 4, 'so far so good with this tutor',4)");
+ database.QueryData("INSERT INTO review VALUES(3, 1, 'Make an A for the test after taking this tutor',4)");
+ database.QueryData("INSERT INTO review VALUES(3, 2, 'not really good, but ok',3);
+ database.QueryData("INSERT INTO review VALUES(4, 2, 'good and fair price tutor',4);
+ database.QueryData("INSERT INTO review VALUES(4, 3, 'great tutor ever',5);
+ database.QueryData("INSERT INTO review VALUES(5, 5, 'this guy is good, but not really an expert',3);
 
  *****************/

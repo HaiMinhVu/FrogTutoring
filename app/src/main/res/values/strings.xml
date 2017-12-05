@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">FrogTutoring</string>
     <string name="title_activity_search">Search</string>
+    <string name="action_settings" />
+    <string name="nav_drawer_opened" />
+    <string name="nav_drawer_closed" />
 </resources>
